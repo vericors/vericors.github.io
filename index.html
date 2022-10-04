@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kohärentes Atmen</title>
+</head>
+<style>
+  html, body {height: 100%}
+
+.atmen {
+  margin: 50px auto;
+  padding: 2px;
+  width: 100%;
+  max-width: 500px;
+  height: 500px;
+  border: 3px solid #e8f4f8;
+  animation: atmen-color-change 1s infinite;
+}
+
+.atmen
+{
+  height: 500px;
+  width: 50px;
+}
+
+.atmen__bar 
+{
+  height: 100%;
+  width: 100%;
+  background-color: lightblue;
+  animation: atmen-fill-bar 10s linear infinite;
+}
+
+@keyframes atmen-color-change {
+  0% {
+    border: 3px solid #add8e6
+;
+  }
+   50% {
+    border: 3px solid #e8f4f8;
+  }
+   100% {
+    border: 3px solid #add8e6
+;
+  }
+}
+
+@keyframes atmen-fill-bar {
+  0% {height: 0%;}
+  50% {height: 100%;} 
+  100% {height: 0%;}
+}
+
+
+
+.progress {
+  margin: 50px auto;
+  padding: 2px;
+  width: 100%;
+  max-width: 500px;
+  height: 30px;
+  background-color: #e8f4f8;
+}
+
+.progress .progress__bar {
+  height: 100%;
+  width: 0%;
+  background-color: #d0e9f1;
+  animation: fill-bar 300s linear infinite;
+}
+
+@keyframes fill-bar {
+  from {width: 0%;}
+  to {width: 100%;}
+}
+</style>
+<body>
+<div class="atmen"> 
+  <div class="atmen__bar"></div>
+</div>
+
+
+<div class="progress"> 
+  <div class="progress__bar"></div>
+</div>
+
+
+</body>
+</html>
